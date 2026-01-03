@@ -72,5 +72,22 @@ ul {
     font-style: italic;
     color: mediumpurple;
     margin-top: 10px;
+    text-indent: none;
+}
+
+#minutes {
+    font-weight: bold;
+    font-style: italic;
+    color: mediumpurple;
+    margin-top: 10px;
+    text-indent: none;
+}
+
+#seconds {
+    font-weight: bold;
+    font-style: italic;
+    color: mediumpurple;
+    margin-top: 10px;
+    text-indent: none;
 }
 
