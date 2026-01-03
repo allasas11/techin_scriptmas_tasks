@@ -30,6 +30,15 @@ ul {
     margin: 0 auto;
 }
 
+a {
+    color: mediumorchid;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #40ff9f;
+}
+
 .task-wrapper {
     background: #292929;
     border-radius: 0.75rem;
