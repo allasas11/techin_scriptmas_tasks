@@ -13,3 +13,10 @@ This repository contains solutions to 22 tasks completed as part of a course sel
 - Plain JS tasks: open `index.html`
 - TS tasks: `npm install && npm run build`
 - React tasks: `npm install && npm run dev`
+
+
+## Branch Strategy
+
+- `main`: stable branch containing only the core project.  
+- `develop`: integration branch for completed tasks.  
+- `task-XX-*`: feature branches for individual tasks, merged into `develop` upon completion.
