@@ -84,3 +84,10 @@ a:hover {
     text-indent: none;
 }
 
+#tree-output {
+    font-weight: bold;
+    font-style: italic;
+    color: mediumpurple;
+    margin-top: 10px;
+    text-indent: none;
+}
