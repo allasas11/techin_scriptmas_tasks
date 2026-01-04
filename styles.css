@@ -76,7 +76,7 @@ a:hover {
     font-weight: 600;
 }
 
-#result, #minutes, #seconds, #total, #count {
+#result, #minutes, #seconds, #total, #count, #ascii, #message {
     font-weight: bold;
     font-style: italic;
     color: mediumpurple;
