@@ -65,12 +65,12 @@ function renderNumber(num) {
     return DIGITS[num];
 }
 
-  const digits = String(num).split(""); // "10" → ["1", "0"]
+  const digits = String(num).split("");
 
   const asciiLinesArray = digits.map(d => DIGITS[Number(d)].split("\n"));
 
   const combinedLines = asciiLinesArray.reduce((acc, curr) =>
-    acc.map((line, i) => line + "   " + curr[i])
+    acc.map((line, i) => line + " " + curr[i])
   );
 
   return combinedLines.join("\n");
