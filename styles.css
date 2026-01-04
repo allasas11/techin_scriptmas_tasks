@@ -76,7 +76,7 @@ a:hover {
     font-weight: 600;
 }
 
-#result, #minutes, #seconds, #total, #count, #ascii, #message, #hour, #minute, #output, #points-output {
+#result, #minutes, #seconds, #total, #count, #ascii, #message, #hour, #minute, #output, #points-output, #anagram-output {
     font-weight: bold;
     font-style: italic;
     color: mediumpurple;
