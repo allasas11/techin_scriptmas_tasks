@@ -76,23 +76,7 @@ a:hover {
     font-weight: 600;
 }
 
-#result {
-    font-weight: bold;
-    font-style: italic;
-    color: mediumpurple;
-    margin-top: 10px;
-    text-indent: none;
-}
-
-#minutes {
-    font-weight: bold;
-    font-style: italic;
-    color: mediumpurple;
-    margin-top: 10px;
-    text-indent: none;
-}
-
-#seconds {
+#result, #minutes, #seconds, #total, #count {
     font-weight: bold;
     font-style: italic;
     color: mediumpurple;
