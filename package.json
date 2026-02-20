@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "---",
   "main": "main.js",
-  "devDependencies": {},
   "scripts": {
     "sass-dev": "sass --watch styles.scss styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/allasas11/techin_scriptmas_tasks/issues"
   },
-  "homepage": "https://github.com/allasas11/techin_scriptmas_tasks#readme"
+  "homepage": "https://github.com/allasas11/techin_scriptmas_tasks#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
