@@ -35,47 +35,67 @@ p {
     text-indent: 2em;
 }
 
-ul.task-list {
+.task-list {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0;
-}
 
-li.task-list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: $secondary-color;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.15);
-    width: 256px;
-}
+    &:has(.task-list-item:hover) .task-list-item:not(:hover) {
+        filter: blur(0.25rem);
+        transform: scale(0.975);
+        opacity: 0.85;
+        box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    }
 
-li.task-list-item img {
-    width: 100%;
-    border-radius: 0.5rem 0.5rem 0 0;
-    object-fit: cover;
+    .task-list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $secondary-color;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.15);
+        width: 256px;
+        transition: all 0.3s ease;
 
-}
+        &:hover {
+            filter: blur(0);
+            transform: scale(1.025);
+            opacity: 1;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+            z-index: 1;
 
-a.task-link {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
-    color: $accent-color;
-    transition: color 0.3s ease;
+            img {
+                transform: rotate(15deg);
+            }
 
-}
+            .task-list-item-title {
+                color: $primary-color;
+            }
 
-a:hover {
-    text-decoration: underline;
-    color: $primary-color;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 0.5rem 0.5rem 0 0;
+            object-fit: cover;
+            transition: all 0.3s ease ;
+
+        }
+
+        .task-link {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            color: $accent-color;
+            transition: color 0.3s ease;
+        }
+    }
 }
 
 .task-wrapper {

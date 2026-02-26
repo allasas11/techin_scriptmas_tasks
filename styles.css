@@ -1,18 +1,7 @@
-@import "normalize";
-
-* {
+** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-ul, ol {
-    list-style: none; 
-}
-
-img {
-    max-width: 100%; 
-    display: block;
 }
 
 body {
@@ -34,16 +23,21 @@ p {
   text-indent: 2em;
 }
 
-ul.task-list {
+.task-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 0;
 }
-
-li.task-list-item {
+.task-list:has(.task-list-item:hover) .task-list-item:not(:hover) {
+  filter: blur(0.25rem);
+  transform: scale(0.975);
+  opacity: 0.85;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.task-list .task-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,32 +45,36 @@ li.task-list-item {
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
   width: 256px;
+  transition: all 0.3s ease;
 }
-
-li.task-list-item img {
+.task-list .task-list-item:hover {
+  filter: blur(0);
+  transform: scale(1.025);
+  opacity: 1;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+.task-list .task-list-item:hover img {
+  transform: rotate(15deg);
+}
+.task-list .task-list-item:hover .task-list-item-title {
+  color: #40ff9f;
+}
+.task-list .task-list-item img {
   width: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
-
-a.task-link {
+.task-list .task-list-item .task-link {
   padding: 0.5rem 1rem;
   text-decoration: none;
   text-align: center;
-  font-size: 1.15rem;
   font-weight: bold;
+  font-size: 1.25rem;
   letter-spacing: 1px;
-  background: linear-gradient(45deg, #40ff9f 45%, mediumorchid 55%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: background-position 0.3s ease;
-}
-
-a.task-link:hover {
-  background-position: 0 0;
+  color: mediumorchid;
+  transition: color 0.3s ease;
 }
 
 .task-wrapper {
